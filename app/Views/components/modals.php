@@ -124,18 +124,13 @@
                 <i class="fas fa-user-plus"></i>
                 Add New Category
             </h3>
-            <button class="close-btn" id="closeMemberModal">
+            <button class="close-btn" id="closeCategoryModal">
                 <i class="fas fa-times"></i>
             </button>
         </div>
         <div class="modal-body">
             <form id="categoryForm">
                 <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="categoryName" class="form-label fw-bold">Category Name</label>
-                        <input type="text" class="form-control" id="categoryName" name="categoryName" placeholder="e.g. Supplements, Membership Plans, Personal Training" required>
-                    </div>
-
                     <div class="mb-3">
                         <label for="categoryType" class="form-label fw-bold">Category Type</label>
                         <select class="form-select" id="categoryType" name="categoryType" required>
@@ -145,18 +140,7 @@
                         </select>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="categoryDescription" class="form-label fw-bold">Description</label>
-                        <textarea class="form-control" id="categoryDescription" name="categoryDescription" rows="3" placeholder="Brief description of this category..."></textarea>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="categoryIcon" class="form-label fw-bold">Icon (Font Awesome)</label>
-                        <input type="text" class="form-control" id="categoryIcon" name="categoryIcon" placeholder="e.g. fas fa-dumbbell">
-                        <div class="form-text">Use <a href="https://fontawesome.com/icons" target="_blank">Font Awesome</a> classes (e.g. fas fa-box).</div>
-                    </div>
                 </div>
-
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">
                         <i class="fas fa-times"></i> Cancel

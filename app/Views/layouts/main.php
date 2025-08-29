@@ -69,6 +69,7 @@
     <script src="<?= base_url('js/navigation.js') ?>"></script>
     <script src="<?= base_url('js/pos.js') ?>"></script>
     <script src="<?= base_url('js/members.js') ?>"></script>
+    <script src="<?= base_url('js/categories.js') ?>"></script>
     <script src="<?= base_url('js/modals.js') ?>"></script>
     <script src="<?= base_url('js/app.js') ?>"></script>
 </body>

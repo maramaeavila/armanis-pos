@@ -7,7 +7,6 @@ class GymApp {
     this.updateClock();
     setInterval(() => this.updateClock(), 1000);
 
-    await this.loadInitialData();
 
     this.initializeComponents();
 
@@ -28,17 +27,7 @@ class GymApp {
     }
   }
 
-  async loadInitialData() {
-    try {
-      await navigationManager.loadDashboardData();
-
-      await posManager.loadPOSData();
-
-      await membersManager.loadMembers();
-    } catch (error) {
-      console.error("Failed to load initial data:", error);
-    }
-  }
+ 
 
   initializeComponents() {
     const originalUpdateDisplay = cart.updateDisplay.bind(cart);

@@ -45,7 +45,6 @@ class NavigationManager {
 
     this.closeMobileMenu();
 
-    this.loadSectionData(sectionName);
   }
 
   updatePageTitle() {
@@ -101,44 +100,8 @@ class NavigationManager {
     }
   }
 
-  async loadSectionData(sectionName) {
-    try {
-      switch (sectionName) {
-        case "dashboard":
-          await this.loadDashboardData();
-          break;
-        case "members":
-          await this.loadMembersData();
-          break;
-        case "pos":
-          await this.loadPOSData();
-          break;
-        case "transactions":
-          await this.loadTransactionsData();
-          break;
-      }
-    } catch (error) {
-      console.error(`Failed to load ${sectionName} data:`, error);
-    }
-  }
 
-  async loadDashboardData() {
-    try {
-      const stats = await db.getDashboardStats();
-      document.getElementById("activeMembersCount").textContent =
-        stats.active_members.toLocaleString();
-      document.getElementById(
-        "dailyRevenueCount"
-      ).textContent = `$${stats.daily_revenue.toLocaleString()}`;
-      document.getElementById("dailyTransactionsCount").textContent =
-        stats.daily_transactions.toLocaleString();
-      document.getElementById(
-        "monthlyGrowthCount"
-      ).textContent = `${stats.monthly_growth.toFixed(1)}%`;
-    } catch (error) {
-      console.error("Failed to load dashboard stats:", error);
-    }
-  }
+
 
   async loadMembersData() {
     if (window.membersManager) {
