@@ -18,9 +18,9 @@ class ProductModel extends Model
         'price',
         'stock_quantity',
         'category',
-        'barcode',
-        'status'
-    ];
+        'created_at',
+        'updated_at'
+        ];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;
