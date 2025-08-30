@@ -1,10 +1,11 @@
+
 <div class="pos-layout">
     <div class="pos-left">
         <div class="pos-header">
             <div class="search-container">
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search products, memberships, or members..." id="searchInput">
+                    <input type="text" placeholder="Search products" id="searchInput">
                 </div>
                 <!-- <button class="search-btn">
                     <i class="fas fa-barcode"></i>
@@ -12,25 +13,19 @@
             </div>
         </div>
 
-        <div class="pos-tabs">
-            <button class="tab-btn active" data-tab="memberships">
-                <i class="fas fa-id-card"></i>
-                Memberships
-            </button>
-            <button class="tab-btn" data-tab="products">
-                <i class="fas fa-box"></i>
-                Products
-            </button>
-        </div>
 
         <div class="pos-content">
-            <div id="memberships" class="tab-content active">
-                <div class="items-grid" id="membershipGrid">
-                </div>
+            <button class="back-btn" id="backBtn" onclick="window.posManager.backToCategories()">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Categories</span>
+            </button>
+            <div id="categoryGrid" class="category-grid">
+                <!-- Categories will be populated by JavaScript -->
             </div>
-            <div id="products" class="tab-content">
-                <div class="items-grid" id="productGrid">
-                </div>
+            <div id="productGrid" class="product-grid">
+                 
+                <!-- Products will be populated by JavaScript -->
+                
             </div>
         </div>
     </div>
@@ -108,6 +103,7 @@
 
 window.phpData = {
     products: <?= json_encode($products ?? []) ?>,
+    categories: <?= json_encode($categories ?? []) ?>,
     memberships: <?= json_encode(array_filter($products ?? [], function($product) { 
         return isset($product['category_id']) && $product['category_id'] == 2; 
     })) ?>,
@@ -117,32 +113,41 @@ window.phpData = {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded, phpData:', window.phpData);
-    //check files pos.js for the unfamiliar names
+    
     const initializePOS = () => {
         if (window.posManager) {
-            console.log('POS Manager found, initializing...');
+
+            // Set the categories data
+            window.posManager.category = window.phpData.categories.map(category => ({
+                id: category.id,
+                name: category.type || category.name,
+                description: category.description || ''
+            }));
+
+      
             
-            
-            window.posManager.memberships = Object.values(window.phpData.memberships).map(product => ({
+            // Map ALL products (not just items with category_id == 1)
+            window.posManager.products = window.phpData.products.map(product => ({
                 id: product.id,
                 name: product.product_name,
                 price: product.costing_price,
+                category_id: product.category_id,
+                category: product.category_name || "General",
+                category_name: product.category_name,
+                stock_quantity: product.stock_quantity || 10,
+                uom: product.uom_name || "pcs",
             }));
-            
-            window.posManager.products = Object.values(window.phpData.items).map(product => ({
-                id: product.id,
-                name: product.product_name,
-                price: product.costing_price,
-                category: "supplements",
-                stock_quantity: product.stock_quantity || 10
-            }));
-            
-           
-            
-            window.posManager.displayTabContent();
+
+
+            // Display the categories and tabs
+            if (typeof window.posManager.displayCategory === 'function') {
+                window.posManager.displayCategory();
+            }
+      
+
         } else {
             console.log('POS Manager not ready, retrying...');
+            setTimeout(initializePOS, 100);
         }
     };
     
