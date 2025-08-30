@@ -1,0 +1,572 @@
+ERROR - 2025-08-29 21:58:06 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'ci4' in C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\armanis-pos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\armanis-pos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\armanis-pos\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\armanis-pos\app\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\armanis-pos\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\armanis-pos\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\armanis-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\armanis-pos\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'ci4' in C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\armanis-pos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\armanis-pos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\armanis-pos\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\armanis-pos\app\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\armanis-pos\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\armanis-pos\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\armanis-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\armanis-pos\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-08-29 21:58:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'ci4'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+ERROR - 2025-08-29 21:58:27 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'armanimembership' in C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'armanimembershi...', 3306, '', 0)
+#1 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\armanis-pos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\armanis-pos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\armanis-pos\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\armanis-pos\app\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\armanis-pos\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\armanis-pos\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\armanis-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\armanis-pos\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'armanimembership' in C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\armanis-pos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\armanis-pos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\armanis-pos\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\armanis-pos\app\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\armanis-pos\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\armanis-pos\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\armanis-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\armanis-pos\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-08-29 21:58:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'armanimembership'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+ERROR - 2025-08-29 21:58:29 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'armanimembership' in C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'armanimembershi...', 3306, '', 0)
+#1 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\armanis-pos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\armanis-pos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\armanis-pos\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\armanis-pos\app\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\armanis-pos\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\armanis-pos\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\armanis-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\armanis-pos\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'armanimembership' in C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php:246
+Stack trace:
+#0 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(419): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\armanis-pos\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\armanis-pos\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\armanis-pos\system\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\armanis-pos\app\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\armanis-pos\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\armanis-pos\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\armanis-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\armanis-pos\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2025-08-29 21:58:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'armanimembership'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 465.
+ 1 SYSTEMPATH\Database\BaseConnection.php(614): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `products`', [], false)
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(677): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Home.php(12): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+CRITICAL - 2025-08-29 22:17:51 --> TypeError: array_filter(): Argument #1 ($array) must be of type array, CodeIgniter\Database\MySQLi\Result given
+[Method: GET, Route: /]
+in APPPATH\Views\components\pos.php on line 111.
+ 1 APPPATH\Views\components\pos.php(111): array_filter(Object(CodeIgniter\Database\MySQLi\Result), Object(Closure))
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\armanis-pos\\app\\Views\\components\\pos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1167): CodeIgniter\View\View->render('components/pos', [], true)
+ 5 APPPATH\Controllers\Home.php(20): view('components/pos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+ERROR - 2025-08-29 22:21:40 --> mysqli_sql_exception: Unknown column 's.name' in 'field list' in C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT p.*, s.n...', 0)
+#1 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, s.n...')
+#2 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, s.n...')
+#3 C:\xampp\htdocs\armanis-pos\system\Model.php(921): CodeIgniter\Database\BaseConnection->query('SELECT p.*, s.n...')
+#4 C:\xampp\htdocs\armanis-pos\app\Controllers\Home.php(14): CodeIgniter\Model->__call('query', Array)
+#5 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\armanis-pos\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\armanis-pos\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\armanis-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\armanis-pos\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-08-29 22:21:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 's.name' in 'field list'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Model.php(921): CodeIgniter\Database\BaseConnection->query('SELECT p.*, s.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 2 APPPATH\Controllers\Home.php(14): CodeIgniter\Model->__call('query', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+CRITICAL - 2025-08-29 22:21:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 's.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, s.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, s.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 3 SYSTEMPATH\Model.php(921): CodeIgniter\Database\BaseConnection->query('SELECT p.*, s.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 4 APPPATH\Controllers\Home.php(14): CodeIgniter\Model->__call('query', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+CRITICAL - 2025-08-29 22:21:40 --> [Caused by] mysqli_sql_exception: Unknown column 's.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT p.*, s.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, s.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, s.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 4 SYSTEMPATH\Model.php(921): CodeIgniter\Database\BaseConnection->query('SELECT p.*, s.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 5 APPPATH\Controllers\Home.php(14): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+ERROR - 2025-08-29 22:21:49 --> mysqli_sql_exception: Unknown column 'suom.name' in 'field list' in C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT p.*, suo...', 0)
+#1 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, suo...')
+#2 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, suo...')
+#3 C:\xampp\htdocs\armanis-pos\system\Model.php(921): CodeIgniter\Database\BaseConnection->query('SELECT p.*, suo...')
+#4 C:\xampp\htdocs\armanis-pos\app\Controllers\Home.php(14): CodeIgniter\Model->__call('query', Array)
+#5 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\armanis-pos\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\armanis-pos\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\armanis-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\armanis-pos\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2025-08-29 22:21:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'suom.name' in 'field list'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Model.php(921): CodeIgniter\Database\BaseConnection->query('SELECT p.*, suom.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 2 APPPATH\Controllers\Home.php(14): CodeIgniter\Model->__call('query', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+CRITICAL - 2025-08-29 22:21:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'suom.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, suom.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, suom.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 3 SYSTEMPATH\Model.php(921): CodeIgniter\Database\BaseConnection->query('SELECT p.*, suom.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 4 APPPATH\Controllers\Home.php(14): CodeIgniter\Model->__call('query', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+CRITICAL - 2025-08-29 22:21:49 --> [Caused by] mysqli_sql_exception: Unknown column 'suom.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT p.*, suom.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, suom.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, suom.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 4 SYSTEMPATH\Model.php(921): CodeIgniter\Database\BaseConnection->query('SELECT p.*, suom.name FROM products p
+            JOIN unit_of_measure uom ON p.suom_id = uom.id
+        ')
+ 5 APPPATH\Controllers\Home.php(14): CodeIgniter\Model->__call('query', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+ERROR - 2025-08-29 23:03:01 --> mysqli_sql_exception: Table 'armanismembership.uom' doesn't exist in C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT p.*, c.c...', 0)
+#1 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, c.c...')
+#2 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, c.c...')
+#3 C:\xampp\htdocs\armanis-pos\app\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.c...')
+#4 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\armanis-pos\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\armanis-pos\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\armanis-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\armanis-pos\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2025-08-29 23:03:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'armanismembership.uom' doesn't exist
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN uom ON p.uom_id = uom.id')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+CRITICAL - 2025-08-29 23:03:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'armanismembership.uom' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN uom ON p.uom_id = uom.id')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN uom ON p.uom_id = uom.id')
+ 3 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN uom ON p.uom_id = uom.id')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+CRITICAL - 2025-08-29 23:03:01 --> [Caused by] mysqli_sql_exception: Table 'armanismembership.uom' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN uom ON p.uom_id = uom.id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN uom ON p.uom_id = uom.id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN uom ON p.uom_id = uom.id')
+ 4 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN uom ON p.uom_id = uom.id')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+ERROR - 2025-08-29 23:03:22 --> mysqli_sql_exception: Unknown column 'c.category_name' in 'field list' in C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT p.*, c.c...', 0)
+#1 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, c.c...')
+#2 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, c.c...')
+#3 C:\xampp\htdocs\armanis-pos\app\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.c...')
+#4 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\armanis-pos\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\armanis-pos\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\armanis-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\armanis-pos\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2025-08-29 23:03:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.category_name' in 'field list'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+CRITICAL - 2025-08-29 23:03:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.category_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 3 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+CRITICAL - 2025-08-29 23:03:22 --> [Caused by] mysqli_sql_exception: Unknown column 'c.category_name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 4 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.category_name , uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+ERROR - 2025-08-29 23:03:32 --> mysqli_sql_exception: Unknown column 'c.name' in 'field list' in C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT p.*, c.n...', 0)
+#1 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, c.n...')
+#2 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, c.n...')
+#3 C:\xampp\htdocs\armanis-pos\app\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.n...')
+#4 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\armanis-pos\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\armanis-pos\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\armanis-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\armanis-pos\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2025-08-29 23:03:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.name' in 'field list'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.name as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+CRITICAL - 2025-08-29 23:03:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'c.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, c.name as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, c.name as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 3 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.name as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+CRITICAL - 2025-08-29 23:03:32 --> [Caused by] mysqli_sql_exception: Unknown column 'c.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT p.*, c.name as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, c.name as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, c.name as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 4 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.name as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+ERROR - 2025-08-29 23:03:41 --> mysqli_sql_exception: Unknown column 'uom.name' in 'field list' in C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\armanis-pos\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT p.*, c.t...', 0)
+#1 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, c.t...')
+#2 C:\xampp\htdocs\armanis-pos\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, c.t...')
+#3 C:\xampp\htdocs\armanis-pos\app\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.t...')
+#4 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(933): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\armanis-pos\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\armanis-pos\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\armanis-pos\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\xampp\htdocs\armanis-pos\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 C:\xampp\htdocs\armanis-pos\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2025-08-29 23:03:41 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'uom.name' in 'field list'
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.type as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+CRITICAL - 2025-08-29 23:03:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'uom.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, c.type as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, c.type as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 3 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.type as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
+CRITICAL - 2025-08-29 23:03:41 --> [Caused by] mysqli_sql_exception: Unknown column 'uom.name' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT p.*, c.type as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('SELECT p.*, c.type as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT p.*, c.type as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 4 APPPATH\Controllers\Home.php(13): CodeIgniter\Database\BaseConnection->query('SELECT p.*, c.type as category_name, uom.name as uom_name FROM products p LEFT JOIN
+         category c ON p.category_id = c.id
+        LEFT JOIN unit_of_measure ON p.suom_id = uom.id')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\armanis-pos\\public\\index.php')
