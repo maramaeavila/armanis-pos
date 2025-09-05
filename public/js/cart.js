@@ -17,8 +17,11 @@ class ShoppingCart {
   }
 
   addItem(item, type = "product") {
+    console.log('Adding item:', item, 'Type:', type); // Debug log
+    
+    const numericId = parseInt(item.id);
     const existingItem = this.items.find(
-      (cartItem) => cartItem.id === item.id && cartItem.type === type
+      (cartItem) => parseInt(cartItem.id) === numericId && cartItem.type === type
     );
 
     if (existingItem) {
@@ -26,33 +29,51 @@ class ShoppingCart {
     } else {
       this.items.push({
         ...item,
+        id: numericId, // Ensure ID is numeric
         type: type,
         quantity: 1,
       });
     }
 
+    console.log('Cart items after adding:', this.items); // Debug log
     this.updateDisplay();
     this.showAddedItemFeedback(item.name);
   }
 
   removeItem(id, type) {
+    console.log('Removing item:', { id, type }); // Debug log
+    
+    // Convert id to number to ensure proper matching
+    const numericId = parseInt(id);
     this.items = this.items.filter(
-      (item) => !(item.id === id && item.type === type)
+      (item) => !(parseInt(item.id) === numericId && item.type === type)
     );
+    
+    console.log('Cart items after removal:', this.items); // Debug log
     this.updateDisplay();
   }
 
   updateQuantity(id, type, quantity) {
+    console.log('updateQuantity called:', { id, type, quantity }); // Debug log
+    
+    // Convert id to number to ensure proper matching
+    const numericId = parseInt(id);
     const item = this.items.find(
-      (item) => item.id === id && item.type === type
+      (item) => parseInt(item.id) === numericId && item.type === type
     );
+    
+    console.log('Found item:', item); // Debug log
+    console.log('All cart items:', this.items); // Debug log
+    
     if (item) {
       if (quantity <= 0) {
-        this.removeItem(id, type);
+        this.removeItem(numericId, type);
       } else {
-        item.quantity = quantity;
+        item.quantity = parseInt(quantity);
         this.updateDisplay();
       }
+    } else {
+      console.warn('Item not found in cart:', { id: numericId, type });
     }
   }
 
@@ -105,7 +126,7 @@ class ShoppingCart {
                     <h4>${item.name}</h4>
                     <p>${
                       item.type === "membership"
-                        ? `${item.duration_months} month(s)`
+                        ? ``
                         : item.category || "Product"
                     }</p>
                 </div>
@@ -123,7 +144,7 @@ class ShoppingCart {
                             <i class="fas fa-plus"></i>
                         </button>
                     </div>
-                    <span class="item-total">$${(
+                    <span class="item-total">₱${(
                       item.price * item.quantity
                     ).toFixed(2)}</span>
                     <button class="remove-item" onclick="cart.removeItem(${
@@ -143,9 +164,9 @@ class ShoppingCart {
     const tax = this.getTax();
     const total = this.getTotal();
 
-    document.getElementById("subtotal").textContent = `$${subtotal.toFixed(2)}`;
-    document.getElementById("tax").textContent = `$${tax.toFixed(2)}`;
-    document.getElementById("total").textContent = `$${total.toFixed(2)}`;
+    document.getElementById("subtotal").textContent = `₱${subtotal.toFixed(2)}`;
+    document.getElementById("tax").textContent = `₱${tax.toFixed(2)}`;
+    document.getElementById("total").textContent = `₱${total.toFixed(2)}`;
   }
 
   updateCheckoutButton() {

@@ -25,10 +25,12 @@
 
         <div class="pos-content">
             <div id="memberships" class="tab-content active">
-                <div class="items-grid" id="membershipGrid"></div>
+                <div class="items-grid" id="membershipGrid">
+                </div>
             </div>
             <div id="products" class="tab-content">
-                <div class="items-grid" id="productGrid"></div>
+                <div class="items-grid" id="productGrid">
+                </div>
             </div>
         </div>
     </div>
@@ -101,3 +103,49 @@
         </div>
     </div>
 </div>
+<script>
+    // renders the data dynamically from PHP to JS
+
+window.phpData = {
+    products: <?= json_encode($products ?? []) ?>,
+    memberships: <?= json_encode(array_filter($products ?? [], function($product) { 
+        return isset($product['category_id']) && $product['category_id'] == 2; 
+    })) ?>,
+    items: <?= json_encode(array_filter($products ?? [], function($product) { 
+        return isset($product['category_id']) && $product['category_id'] == 1; 
+    })) ?>
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, phpData:', window.phpData);
+    //check files pos.js for the unfamiliar names
+    const initializePOS = () => {
+        if (window.posManager) {
+            console.log('POS Manager found, initializing...');
+            
+            
+            window.posManager.memberships = Object.values(window.phpData.memberships).map(product => ({
+                id: product.id,
+                name: product.product_name,
+                price: product.costing_price,
+            }));
+            
+            window.posManager.products = Object.values(window.phpData.items).map(product => ({
+                id: product.id,
+                name: product.product_name,
+                price: product.costing_price,
+                category: "supplements",
+                stock_quantity: product.stock_quantity || 10
+            }));
+            
+           
+            
+            window.posManager.displayTabContent();
+        } else {
+            console.log('POS Manager not ready, retrying...');
+        }
+    };
+    
+    initializePOS();
+});
+</script>
