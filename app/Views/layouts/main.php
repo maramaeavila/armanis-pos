@@ -25,10 +25,6 @@
         <main class="main-content">
             <?= view('components/header') ?>
 
-            <section id="dashboard" class="content-section active">
-                <?= view('components/dashboard') ?>
-            </section>
-
             <section id="pos" class="content-section">
                 <?= view('components/pos') ?>
             </section>
@@ -37,24 +33,8 @@
                 <?= view('components/members') ?>
             </section>
 
-            <section id="memberships" class="content-section">
-                <?= view('components/memberships') ?>
-            </section>
-
-            <section id="categories" class="content-section">
-                <?= view('components/categories') ?>
-            </section>
-
-            <section id="products" class="content-section">
-                <?= view('components/products') ?>
-            </section>
-
             <section id="transactions" class="content-section">
                 <?= view('components/transactions') ?>
-            </section>
-
-            <section id="reports" class="content-section">
-                <?= view('components/reports') ?>
             </section>
         </main>
     </div>

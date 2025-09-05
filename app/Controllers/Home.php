@@ -8,7 +8,7 @@ class Home extends BaseController
     {
         return view('layouts/main', [
             'title' => 'Armanis - POS',
-            'content' => view('components/dashboard')
+            'content' => view('components/POS')
         ]);
     }
 }

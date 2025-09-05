@@ -1,6 +1,6 @@
 class NavigationManager {
   constructor() {
-    this.currentSection = "dashboard";
+    this.currentSection = "POS";
     this.initializeEventListeners();
     this.updatePageTitle();
   }
@@ -44,15 +44,12 @@ class NavigationManager {
     this.updatePageTitle();
 
     this.closeMobileMenu();
-
   }
 
   updatePageTitle() {
     const titles = {
-      dashboard: "Dashboard",
-      pos: "Point of Sale",
+      pos: "POS",
       members: "Members",
-      memberships: "Memberships",
       categories: "Categories",
       products: "Products",
       transactions: "Transactions",
@@ -61,7 +58,7 @@ class NavigationManager {
 
     const pageTitle = document.querySelector(".page-title");
     if (pageTitle) {
-      pageTitle.textContent = titles[this.currentSection] || "Dashboard";
+      pageTitle.textContent = titles[this.currentSection] || "POS";
     }
   }
 
@@ -99,9 +96,6 @@ class NavigationManager {
       overlay.classList.remove("show");
     }
   }
-
-
-
 
   async loadMembersData() {
     if (window.membersManager) {
