@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= esc($title ?? 'GymPro POS - Professional Gym Management System') ?></title>
+    <link rel="stylesheet" href="<?= base_url('styles/css/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('styles/main.css') ?>">
     <link rel="stylesheet" href="<?= base_url('styles/sidebar.css') ?>">
     <link rel="stylesheet" href="<?= base_url('styles/pos.css') ?>">
@@ -60,6 +61,7 @@
 
     <?= view('components/modals') ?>
 
+    <script src="<?= base_url('js/js/bootstrap.bundle.min.js') ?>"></script>
     <script src="<?= base_url('js/database.js') ?>"></script>
     <script src="<?= base_url('js/cart.js') ?>"></script>
     <script src="<?= base_url('js/payment.js') ?>"></script>

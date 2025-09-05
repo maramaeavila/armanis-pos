@@ -7,6 +7,9 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'Home::index');
 $routes->get('/dashboard', 'dashboard::index');
+$routes->get('test', function () {
+    return view('test');
+});
 
 $routes->group('/', function ($routes) {
 
