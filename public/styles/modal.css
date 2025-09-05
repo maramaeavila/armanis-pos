@@ -1,0 +1,360 @@
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 26, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 2000;
+    animation: fadeIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+}
+
+.modal-content {
+    background: var(--bg-primary);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--border-color);
+}
+
+.receipt-modal .modal-content {
+    max-width: 600px;
+}
+
+.modal-header {
+    padding: var(--spacing-xl);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+}
+
+.modal-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--text-light);
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+    font-size: 1.125rem;
+}
+
+.close-btn:hover {
+    background: rgba(239, 68, 68, 0.1);
+    color: var(--error);
+    transform: scale(1.1);
+}
+
+.modal-body {
+    padding: var(--spacing-xl);
+}
+
+.form-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.form-actions button {
+    flex: 1;
+}
+
+/* Receipt Styles */
+.receipt-content {
+    background: var(--bg-primary);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--border-color);
+    font-family: 'Courier New', monospace;
+    color: var(--text-primary);
+}
+
+.receipt-header {
+    text-align: center;
+    margin-bottom: var(--spacing-2xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 2px solid var(--primary-black);
+}
+
+.receipt-header .gym-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-black);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.receipt-header .gym-info {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.receipt-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.receipt-info-section h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.receipt-info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-xs);
+    font-size: 0.875rem;
+}
+
+.receipt-info-label {
+    color: var(--text-secondary);
+}
+
+.receipt-info-value {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.receipt-items {
+    margin-bottom: var(--spacing-xl);
+}
+
+.receipt-items h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: var(--spacing-sm);
+}
+
+.receipt-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.receipt-item:last-child {
+    border-bottom: none;
+}
+
+.receipt-item-desc {
+    flex: 1;
+    padding-right: var(--spacing-md);
+}
+
+.receipt-item-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.receipt-item-details {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.receipt-item-qty {
+    margin: 0 var(--spacing-md);
+    color: var(--text-secondary);
+    font-weight: 500;
+    min-width: 60px;
+    text-align: center;
+}
+
+.receipt-item-price {
+    font-weight: 700;
+    color: var(--text-primary);
+    min-width: 80px;
+    text-align: right;
+}
+
+.receipt-totals {
+    margin-bottom: var(--spacing-xl);
+    padding-top: var(--spacing-lg);
+    border-top: 2px solid var(--primary-black);
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.875rem;
+}
+
+.total-row.grand-total {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid var(--border-color);
+    margin-top: var(--spacing-md);
+}
+
+.receipt-payments {
+    margin-bottom: var(--spacing-xl);
+}
+
+.receipt-payments h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.payment-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.875rem;
+}
+
+.payment-row-method {
+    color: var(--text-secondary);
+}
+
+.payment-row-amount {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.receipt-footer {
+    text-align: center;
+    padding-top: var(--spacing-lg);
+    border-top: 2px solid var(--primary-black);
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    line-height: 1.6;
+}
+
+.receipt-footer .thank-you {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: var(--spacing-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.receipt-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+.receipt-actions button {
+    flex: 1;
+}
+
+/* Animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .modal {
+        padding: var(--spacing-md);
+    }
+    
+    .modal-content {
+        max-height: 95vh;
+    }
+    
+    .modal-header,
+    .modal-body {
+        padding: var(--spacing-lg);
+    }
+    
+    .receipt-content {
+        padding: var(--spacing-lg);
+    }
+    
+    .receipt-info {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .receipt-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .receipt-header .gym-name {
+        font-size: 1.5rem;
+    }
+    
+    .receipt-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+    
+    .receipt-item-qty,
+    .receipt-item-price {
+        text-align: left;
+    }
+}
