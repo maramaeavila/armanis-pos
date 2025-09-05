@@ -36,6 +36,10 @@
             <section id="transactions" class="content-section">
                 <?= view('components/transactions') ?>
             </section>
+
+            <section id="orderpayments" class="content-section">
+                <?= view('components/orderpayments') ?>
+            </section>
         </main>
     </div>
 

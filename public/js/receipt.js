@@ -148,7 +148,7 @@ class ReceiptManager {
                 <div class="thank-you">Thank You for Your Business!</div>
                 <p>Please keep this receipt for your records.</p>
                 <p>Visit us online at www.gympro.com</p>
-                <p>Follow us on social media @GymProFitness</p>
+                <p>Follow us on social media @GymProArmanisPOSFitness</p>
             </div>
         `;
   }

@@ -71,47 +71,120 @@
     </div>
 </div>
 
-<!-- Member -->
-<div id="memberModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3>
-                <i class="fas fa-user-plus"></i>
-                Add New Member
-            </h3>
-            <button class="close-btn" id="closeMemberModal">
-                <i class="fas fa-times"></i>
-            </button>
+<!-- Member List Modal -->
+<div id="memberModal" class="modal fade" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h3>
+                    <i class="fas fa-users"></i>
+                    Member List
+                </h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Emergency Contact</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="membersTableBody">
+                            <tr>
+                                <td>1</td>
+                                <td>Juan</td>
+                                <td>Dela Cruz</td>
+                                <td>juan@example.com</td>
+                                <td>09123456789</td>
+                                <td>Maria - 09987654321</td>
+                                <td>
+                                    <input type="checkbox" class="member-checkbox" data-id="1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ana</td>
+                                <td>Santos</td>
+                                <td>ana@example.com</td>
+                                <td>09223334444</td>
+                                <td>Jose - 09119998877</td>
+                                <td>
+                                    <input type="checkbox" class="member-checkbox" data-id="1">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
-        <div class="modal-body">
-            <form id="memberForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>First Name</label>
-                        <input type="text" id="memberFirstName" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Last Name</label>
-                        <input type="text" id="memberLastName" required>
-                    </div>
+    </div>
+</div>
+
+<!-- Member List Modal -->
+<div id="orderpaymentsModal" class="modal fade" tabindex="-1" aria-labelledby="orderpaymentsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h3>
+                    <i class="fas fa-users"></i>
+                    Order of Payments
+                </h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Emergency Contact</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="membersTableBody">
+                            <tr>
+                                <td>1</td>
+                                <td>Juan</td>
+                                <td>Dela Cruz</td>
+                                <td>juan@example.com</td>
+                                <td>09123456789</td>
+                                <td>Maria - 09987654321</td>
+                                <td>
+                                    <input type="checkbox" class="member-checkbox" data-id="1">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Ana</td>
+                                <td>Santos</td>
+                                <td>ana@example.com</td>
+                                <td>09223334444</td>
+                                <td>Jose - 09119998877</td>
+                                <td>
+                                    <input type="checkbox" class="member-checkbox" data-id="1">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" id="memberEmail" required>
-                </div>
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" id="memberPhone" required>
-                </div>
-                <div class="form-group">
-                    <label>Emergency Contact</label>
-                    <input type="text" id="memberEmergencyContact" placeholder="Name and phone number">
-                </div>
-                <div class="form-actions">
-                    <button type="button" class="btn-secondary" id="cancelMember">Cancel</button>
-                    <button type="submit" class="btn-primary">Add Member</button>
-                </div>
-            </form>
+            </div>
+
         </div>
     </div>
 </div>

@@ -40,11 +40,20 @@ class NavigationManager {
     document.querySelectorAll(".content-section").forEach((section) => {
       section.classList.remove("active");
     });
-    document.getElementById(sectionName).classList.add("active");
+    if (sectionName === "members") {
+      const modalEl = document.getElementById("memberModal");
+      const modal = new bootstrap.Modal(modalEl);
+      modal.show();
+    } else if (sectionName === "orderpayments") {
+      const modalEl = document.getElementById("orderpaymentsModal");
+      const modal = new bootstrap.Modal(modalEl);
+      modal.show();
+    } else {
+      document.getElementById(sectionName)?.classList.add("active");
+    }
 
     this.currentSection = sectionName;
     this.updatePageTitle();
-
     this.closeMobileMenu();
   }
 

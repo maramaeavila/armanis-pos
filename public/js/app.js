@@ -9,7 +9,7 @@ class GymApp {
 
     this.initializeComponents();
 
-    console.log("GymPro POS System initialized successfully");
+    console.log("Armanis POS System initialized successfully");
   }
 
   updateClock() {

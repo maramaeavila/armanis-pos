@@ -1,7 +1,5 @@
 /* Modal Styles */
 .modal {
-    display: none;
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -23,12 +21,10 @@
     background: var(--bg-primary);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-xl);
-    width: 100%;
-    max-width: 500px;
-    max-height: 90vh;
+    width: 90%;
     overflow-y: auto;
     animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color);  
 }
 
 .receipt-modal .modal-content {
@@ -83,6 +79,12 @@
 
 .form-actions button {
     flex: 1;
+}
+
+.member-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
 /* Receipt Styles */

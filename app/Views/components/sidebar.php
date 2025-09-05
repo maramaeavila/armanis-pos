@@ -16,9 +16,9 @@
                 <i class="fas fa-receipt"></i>
                 <span>Transactions</span>
             </li>
-            <li class="nav-item" data-section="reports">
-                <i class="fas fa-chart-bar"></i>
-                <span>Reports</span>
+            <li class="nav-item" data-section="orderpayments">
+                <i class="fas fa-file-invoice"></i>
+                <span>Order of Payments</span>
             </li>
         </ul>
     </nav>
