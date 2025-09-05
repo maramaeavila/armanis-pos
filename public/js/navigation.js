@@ -1,7 +1,9 @@
 class NavigationManager {
   constructor() {
-    this.currentSection = "POS";
+    this.currentSection = "pos";
+
     this.initializeEventListeners();
+    this.navigateToSection(this.currentSection);
     this.updatePageTitle();
   }
 
@@ -50,8 +52,6 @@ class NavigationManager {
     const titles = {
       pos: "POS",
       members: "Members",
-      categories: "Categories",
-      products: "Products",
       transactions: "Transactions",
       reports: "Reports",
     };

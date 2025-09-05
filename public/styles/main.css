@@ -74,9 +74,13 @@ body {
 
 .main-content {
     flex: 1;
-    margin-left: 280px;
+    margin-left: 280px; 
     transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background: var(--bg-secondary);
+}
+
+.sidebar.collapsed + .main-content {
+    margin-left: 80px; 
 }
 
 .top-header {

@@ -7,7 +7,6 @@ class GymApp {
     this.updateClock();
     setInterval(() => this.updateClock(), 1000);
 
-
     this.initializeComponents();
 
     console.log("GymPro POS System initialized successfully");
@@ -27,8 +26,6 @@ class GymApp {
     }
   }
 
- 
-
   initializeComponents() {
     const originalUpdateDisplay = cart.updateDisplay.bind(cart);
     cart.updateDisplay = function () {
@@ -46,6 +43,11 @@ class GymApp {
       toggleButton.addEventListener("click", () => {
         sidebar.classList.toggle("collapsed");
         mainContent.classList.toggle("expanded");
+
+        const icon = toggleButton.querySelector("i");
+        if (icon) {
+          icon.classList.toggle("rotated");
+        }
       });
     }
   }

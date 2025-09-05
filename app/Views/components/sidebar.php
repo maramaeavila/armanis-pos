@@ -1,9 +1,7 @@
 <aside class="sidebar collapsed" id="sidebar">
-
-
     <nav class="sidebar-nav">
         <ul>
-            <li class="nav-item" data-section="pos">
+            <li class="nav-item" data-section="pos" id="toggleSidebar">
                 <i class="fas fa-angle-double-right"></i>
             </li>
             <li class="nav-item" data-section="pos">

@@ -4,7 +4,7 @@
     background: var(--primary-black);
     color: var(--text-white);
     position: fixed;
-    top: 60px;
+    top: 80px;
     left: 0;
     bottom: 0;
     height: 100vh;
@@ -18,6 +18,15 @@
 .sidebar.collapsed {
     width: 80px;
 }
+
+#toggleSidebar i {
+  transition: transform 0.3s ease;
+}
+
+#sidebar.collapsed #toggleSidebar i {
+  transform: rotate(180deg);
+}
+
 
 .sidebar-header {
     padding: var(--spacing-xl);
@@ -191,22 +200,18 @@
 }
 
 .main-content {
-    /* margin-left: 280px; 
     flex: 1;
-    transition: margin-left 0.3s ease;
+    margin-top: 100px; 
+    margin-left: 280px;
     padding: var(--spacing-xl);
     background: var(--light-gray);
-    min-height: 100vh; */
-    margin-top: 100px; 
-    margin-left: 220px;
-    padding: 20px;
     transition: margin-left 0.3s ease;
     min-height: 100vh;
 }
 
-.main-content.expanded {
+/* .main-content.expanded {
     margin-left: 80px; 
-}
+} */
 
 /* Mobile Sidebar */
 @media (max-width: 768px) {
