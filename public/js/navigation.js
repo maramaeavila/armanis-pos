@@ -35,19 +35,22 @@ class NavigationManager {
     });
     document
       .querySelector(`[data-section="${sectionName}"]`)
-      .classList.add("active");
+      ?.classList.add("active");
 
     document.querySelectorAll(".content-section").forEach((section) => {
-      section.classList.remove("active");
+      if (section.id === "pos") {
+        section.classList.add("active");
+      } else {
+        section.classList.remove("active");
+      }
     });
+
     if (sectionName === "members") {
       const modalEl = document.getElementById("memberModal");
-      const modal = new bootstrap.Modal(modalEl);
-      modal.show();
+      new bootstrap.Modal(modalEl).show();
     } else if (sectionName === "orderpayments") {
       const modalEl = document.getElementById("orderpaymentsModal");
-      const modal = new bootstrap.Modal(modalEl);
-      modal.show();
+      new bootstrap.Modal(modalEl).show();
     } else {
       document.getElementById(sectionName)?.classList.add("active");
     }
@@ -60,9 +63,9 @@ class NavigationManager {
   updatePageTitle() {
     const titles = {
       pos: "POS",
-      members: "Members",
+      members: "members",
       transactions: "Transactions",
-      reports: "Reports",
+      orderpayments: "Order of Payments",
     };
 
     const pageTitle = document.querySelector(".page-title");

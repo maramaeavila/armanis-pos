@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +30,7 @@
             </section>
 
             <section id="members" class="content-section">
-                <?= view('components/members') ?>
+                <?= view('components/pos') ?>
             </section>
 
             <section id="transactions" class="content-section">
@@ -39,7 +38,7 @@
             </section>
 
             <section id="orderpayments" class="content-section">
-                <?= view('components/orderpayments') ?>
+                <?= view('components/pos') ?>
             </section>
         </main>
     </div>
@@ -54,8 +53,6 @@
     <script src="<?= base_url('js/navigation.js') ?>"></script>
     <script src="<?= base_url('js/pos.js') ?>"></script>
     <script src="<?= base_url('js/members.js') ?>"></script>
-    <script src="<?= base_url('js/categories.js') ?>"></script>
-    <script src="<?= base_url('js/modals.js') ?>"></script>
     <script src="<?= base_url('js/app.js') ?>"></script>
 </body>
 

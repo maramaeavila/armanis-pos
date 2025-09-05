@@ -73,7 +73,7 @@
 
 <!-- Member List Modal -->
 <div id="memberModal" class="modal fade" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
 
             <div class="modal-header">
@@ -132,7 +132,7 @@
 
 <!-- Member List Modal -->
 <div id="orderpaymentsModal" class="modal fade" tabindex="-1" aria-labelledby="orderpaymentsModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen modal-dialog-centered">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
 
             <div class="modal-header">

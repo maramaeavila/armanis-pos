@@ -113,6 +113,26 @@ body {
     color: var(--text-white);
 }
 
+.topbar-user {
+  margin-right: 20px;
+}
+
+.topbar-user .username {
+  color: var(--text-white);
+}
+
+.topbar-user .dropdown-menu {
+  min-width: 200px;
+  border-radius: 12px;
+}
+
+.dropdown-item:active,
+.dropdown-item:focus {
+  background-color: #b8941f;  
+  color: #fff;               
+}
+
+
 .header-left {
     display: flex;
     align-items: center;
